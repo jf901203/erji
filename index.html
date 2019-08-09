@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript" src="./jquery.min.js"></script>
+<style>
+	*{
+		margin:0;
+		padding:0;
+		list-style: none;
+	}
+	#demo{
+		width:800px;
+		margin:auto;
+		color:#fff;
+	}
+	#parent{
+      width: 100%;
+      background:#333333;
+      display: flex;
+	}
+#parent li{
+	height:35px;
+	flex:1;
+	display:flex;
+	justify-content:center;
+    align-items:center;
+    position:relative;
+
+}
+.first{
+	position:absolute;
+	width:100%;
+	background:#333333;
+	top:35px;
+	display:none;
+}
+.first li{
+	border-bottom: 1px solid #4D4D4D;
+}
+</style>
+</head>
+<body>
+    <div id="demo">
+    	<ul id="parent">
+    		<li>javascript
+              <ul class="first">
+              	<li>javascript</li>
+              	<li>javascript</li>
+              	<li>javascript</li>
+              	<li>javascript</li>
+              	<li>javascript</li>
+              </ul>
+    		</li>
+    		<li>jquery
+              <ul class="first">
+              		<li>jQuery</li>
+              		<li>jQuery</li>
+              		<li>jQuery</li>
+              		<li>jQuery</li>
+              		<li>jQuery</li>
+              	</ul>	
+    		</li>
+    		<li>html
+             <ul class="first">
+             	<li>html</li>
+             	<li>html</li>
+             	<li>html</li>
+             	<li>html</li>
+             	<li>html</li>
+             </ul>
+    		</li>
+    		<li>css
+             <ul class="first">
+             	<li>css</li>
+             	<li>css</li>
+             	<li>css</li>
+             	<li>css</li>
+             	<li>css</li>
+             </ul>
+    		</li>
+    		<li>boot
+              <ul class="first">
+              	<li>boot</li>
+              	<li>boot</li>
+              	<li>boot</li>
+              	<li>boot</li>
+              	<li>boot</li>
+              </ul>
+    		</li>
+    	</ul>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+	
+$("#parent li").hover(function(){
+
+  $(this).css('background','#7FCF18')
+  $(this).children('.first').stop().slideDown()
+
+},function(){
+
+$(this).css('background','#333333')
+$(this).children('.first').stop().slideUp()
+ 
+})
+
+
+</script>
